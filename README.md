@@ -81,19 +81,11 @@ python -m tests.tests_avl
 python src/benchmark.py
 ```
 
----
-
-## 6. Generate Performance Plots
-
-```bash
-python src/plot_results.py
-```
-
 Generated graphs will appear in the `plots/` folder.
 
 ---
 
-## 7. Visualization
+## 6. Visualization
 
 ### AVL Tree
 
@@ -111,7 +103,7 @@ PNG images will be generated showing the tree structures.
 
 ---
 
-## 8. Dataset Generation
+## 7. Dataset Generation
 
 Datasets are already provided in the `data/` folder.
 
@@ -123,7 +115,7 @@ python src/datasets.py
 
 ---
 
-## 9. Reproducibility
+## 8. Reproducibility
 
 - A fixed random seed (42) is used
 - All datasets are deterministic
@@ -131,7 +123,7 @@ python src/datasets.py
 
 ---
 
-## 10. Notes
+## 9. Notes
 
 - AVL deletion is fully implemented
 - B-Tree deletion is not benchmarked (complexity reasons, documented in report)
@@ -140,7 +132,7 @@ python src/datasets.py
 
 ---
 
-## 11. Author
+## 10. Author
 
 Matthieu Charton  
 GitHub: https://github.com/ChartonMatthieu
