@@ -1,22 +1,130 @@
-# AVL vs B-Tree Performance Comparison
+# Performance Comparison: AVL Tree vs B-Tree
 
-This repository contains implementations of an AVL tree and B-Trees with different minimum degrees, along with scripts to benchmark and visualize their performance.
+This project implements and compares the performance of an AVL tree and B-Trees with different orders.
+The comparison focuses on execution time and memory usage for insertion and search operations.
 
-## Requirements
-
-- Python 3.9+
-- Graphviz installed on your system
-
-### Install Graphviz (Windows)
-Download and install from: https://graphviz.org/download/  
-⚠ During installation: select **Add Graphviz to PATH**.
+This work was developed as part of a seminar assignment on data structures.
 
 ---
 
-## Setup
+## 1. Project Structure
 
-Create and activate a Python virtual environment:
+avl-vs-btree/
+├── src/
+│ ├── avl_tree.py # AVL implementation + visualization
+│ ├── b_tree.py # B-Tree implementation
+│ ├── benchmark.py # Benchmark scripts
+│ ├── plot_results.py # Plot generation
+│ └── datasets.py # Dataset generator
+│
+├── tests/
+│ └── tests_b_tree.py # Unit tests
+│
+├── data/
+│ ├── data_1000.txt
+│ ├── data_5000.txt
+│ ├── data_10000.txt
+│ └── data_50000.txt
+│
+├── plots/ # Generated graphs
+├── requirements.txt
+└── README.md
 
-```bash
+---
+
+## 2. Requirements
+
+- Python 3.9+
+- Graphviz (for visualization)
+
+### Install Graphviz (Windows)
+
+Download from:  
+https://graphviz.org/download/
+
+⚠ During installation:
+✔ Check **"Add Graphviz to PATH"**
+
+Verify installation:
+
+dot -V
+
+---
+
+## 3. Setup Virtual Environment
+
 python -m venv venv
 venv\Scripts\activate
+
+# Install dependencies:
+
+pip install -r requirements.txt
+
+---
+
+## 4. Run Unit Tests
+
+python -m tests.tests_b_tree
+
+---
+
+## 5. Run Benchmarks
+
+python src/benchmark.py
+
+---
+
+## 6. Generate Performance Plots
+
+
+python src/plot_results.py
+
+Generated graphs will appear in the `plots/` folder.
+
+---
+
+## 7. Visualization
+
+### AVL Tree
+
+python src/avl_tree.py
+
+### B-Tree
+
+python src/b_tree.py
+
+PNG images will be generated showing the tree structures.
+
+---
+
+## 8. Dataset Generation
+
+Datasets are already provided in the `data/` folder.
+
+To regenerate them:
+
+python src/datasets.py
+
+---
+
+## 9. Reproducibility
+
+- A fixed random seed (42) is used
+- All datasets are deterministic
+- All experiments can be reproduced using the provided scripts
+
+---
+
+## 10. Notes
+
+- AVL deletion is fully implemented
+- B-Tree deletion is not benchmarked (complexity reasons, documented in report)
+- Only integer values are used as required
+- Experiments are performed on incremental dataset sizes
+
+---
+
+## 11. Author
+
+Matthieu Charton  
+GitHub: https://github.com/ChartonMatthieu
