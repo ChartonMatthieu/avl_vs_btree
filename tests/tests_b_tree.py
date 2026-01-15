@@ -1,4 +1,4 @@
-from b_tree import BTree
+from src.b_tree import BTree
 import random
 
 
